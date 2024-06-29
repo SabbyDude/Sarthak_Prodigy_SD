@@ -1,5 +1,10 @@
 import random
-guess = random.randint(1,100)
+start = int(input("What should be the starting range of the numbers? -->"))
+endit = int(input("What should be the ending range of the numbers? -->"))
+if (start >= endit):
+	print("The ending number is either same or smaller than the beginning number which is not allowed")
+	exit(0)
+guess = random.randint(start,endit)
 count = 1
 your = int(input(f"Enter Guess No.{count}:"))
 while(guess != your):
